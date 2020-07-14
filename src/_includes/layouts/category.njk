@@ -1,0 +1,10 @@
+---
+layout: /layouts/base.njk
+---
+
+{% set categorySlug = title | slug %}
+
+{% for video in collections.videos | categoryFilter(categorySlug) %}
+  {{ video.data.code | safe }}
+  <h3>{{ video.data.title }}</h3>
+{% endfor %}

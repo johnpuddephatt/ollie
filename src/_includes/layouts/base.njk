@@ -1,0 +1,60 @@
+{% extends "extends/html5boilerplate.njk" %}
+
+{% set title = (title + " - " + site.title) if title else (site.title + " - " + site.description) %}
+{% set description = (description) if description else (site.description) %}
+{% set lang = lang | default(site.lang) %}
+
+{% block headStyles %}
+    {% include "partials/styles.njk" %}
+{% endblock %}
+
+{% block headMisc %}
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;800&display=swap" rel="stylesheet">
+
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" href="/assets/img/icon.png">
+
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+
+    {% if image %}
+      <meta property="og:image" content="{{ site.url }}{{ image }}" />
+    {% else %}
+      <meta property="og:image" content="{{ site.url }}/assets/images/default-og.jpg" />
+    {% endif %}
+
+    <meta property="og:description" content="{{ description }}" />
+
+{% endblock %}
+
+{% block body %}
+    {% include "partials/header.njk" %}
+
+    <div class="wrapper">
+      <nav>
+        <ul>
+          {%- for category in collections.categories %}
+            {% set linkSlug = category.data.title | slug %}
+            {% set linkURL = '/category/' + linkSlug + '/' %}
+            <li><a href="{{ linkURL }}">{{ category.data.title }}
+            {% if (page.url == linkURL) or (loop.index == 1 and page.url == '/') %}*{% endif %}
+
+            </a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+
+      <main>
+        {{ super() }}
+
+        {{ content | safe }}
+      </main>
+    </div>
+
+    {% include "partials/footer.njk" %}
+{% endblock %}
+
+{% block bodyScripts %}
+    {% include "partials/scripts.njk" %}
+{% endblock %}
