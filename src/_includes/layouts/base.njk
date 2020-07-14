@@ -9,7 +9,7 @@
 {% endblock %}
 
 {% block headMisc %}
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
 
     <link rel="manifest" href="/site.webmanifest">
     <link rel="apple-touch-icon" href="/assets/img/icon.png">
@@ -31,18 +31,18 @@
 {% block body %}
     {% include "partials/header.njk" %}
 
-    <div class="wrapper">
-      <nav>
-        <ul>
+    <div class="wrapper container">
+      <nav class="primary-navigation">
           {%- for category in collections.categories %}
             {% set linkSlug = category.data.title | slug %}
             {% set linkURL = '/category/' + linkSlug + '/' %}
-            <li><a href="{{ linkURL }}">{{ category.data.title }}
-            {% if (page.url == linkURL) or (loop.index == 1 and page.url == '/') %}*{% endif %}
 
-            </a></li>
+            <a class="primary-navigation--item
+              {% if (page.url == linkURL) or (loop.index == 1 and page.url == '/') %}active{% endif %}"
+              href="{{ linkURL }}">{{ category.data.title }}
+
+            </a>
           {% endfor %}
-        </ul>
       </nav>
 
       <main>

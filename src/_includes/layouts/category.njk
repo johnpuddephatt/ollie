@@ -4,7 +4,13 @@ layout: /layouts/base.njk
 
 {% set categorySlug = title | slug %}
 
-{% for video in collections.videos | categoryFilter(categorySlug) %}
-  {{ video.data.code | safe }}
-  <h3>{{ video.data.title }}</h3>
-{% endfor %}
+<div class="video-item--wrapper">
+  {% for video in collections.videos | categoryFilter(categorySlug) %}
+    <div class="video-item">
+      <div class="video-item--proportional">
+        {{ video.data.code | safe }}
+      </div>
+      <h3 class="video-item--title">{{ video.data.title }}</h3>
+    </div>
+  {% endfor %}
+</div>
