@@ -1,5 +1,5 @@
 ---
-title: Documentary
-slug: documentary
+title: Documentaries
+slug: documentaries
 order: 2
 ---
