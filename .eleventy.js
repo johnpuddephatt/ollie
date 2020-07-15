@@ -12,7 +12,8 @@ module.exports = function(eleventyConfig) {
 
   // Categories
   eleventyConfig.addCollection('categories', collection => {
-    return collection.getFilteredByGlob('./src/categories/*.md');
+    return collection.getFilteredByGlob('./src/categories/*.md')
+      .sort((a, b) => a.data.order - b.data.order);
   });
 
   eleventyConfig.addFilter('categoryFilter', function(collection, category) {
