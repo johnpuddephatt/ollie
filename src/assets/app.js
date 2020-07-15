@@ -2,8 +2,9 @@ let videos = document.querySelectorAll('.video-item--proportional iframe');
 
 videos.forEach(video => {
   // video.setAttribute('loading', 'lazy');
-  let width = video.getAttribute('width');
-  let height = video.getAttribute('height');
+  let width = parseInt(video.getAttribute('width'));
+  let height = parseInt(video.getAttribute('height'));
+
   if(height > width) {
     video.parentNode.parentNode.classList.add('portrait');
   }
