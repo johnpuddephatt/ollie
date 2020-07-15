@@ -13,7 +13,9 @@ collections:
       preview: false
     fields:
       - {label: 'Name', name: 'name', widget: 'string' }
-      - {label: 'Code', name: 'code', widget: 'text' }
+      - {label: 'Subtitle', name: 'subtitle', widget: 'string' }
+            - { label: 'Date', name: 'date', widget: 'datetime', dateFormat: 'Do MMM YYYY', timeFormat: false }
+      - {label: 'Embed code', name: 'code', widget: 'text' }
       - label: "Category"
         name: "category"
         widget: "relation"

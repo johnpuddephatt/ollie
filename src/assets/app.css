@@ -117,7 +117,7 @@ main {
   width: 100%;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1200px) {
   .video-item--wrapper {
     padding-right: 14rem;
   }
@@ -125,6 +125,10 @@ main {
 
 .video-item {
   padding: 0 1rem 4rem;
+}
+
+.video-item.portrait {
+  width: 60%;
 }
 
 .video-item--title {
