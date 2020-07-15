@@ -33,4 +33,4 @@ collections:
     fields:
       - {label: 'Title', name: 'title', widget: 'string' }
       - {label: 'Slug', name: 'slug', widget: 'string', hint: 'Warning: changing this for existing categories may break things.' }
-      - {label: 'Order', name: 'order', widget: 'string', hint: 'Set a numerical value here to determine order in the navigation. A lower number indicates a higher priority.' }
+      - {label: 'Order', name: 'order', default: 99, widget: 'number', hint: 'Enter a number here to determine order in the navigation. A lower number indicates a higher priority.' }
