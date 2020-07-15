@@ -1,6 +1,6 @@
 <header class="site-header">
   <div class="container">
     <h1 class="site-header--title"><a href="/">{{ site.title }}</a></h1>
-    <p class="site-header--subtitle">{{ site.description }}</p>
+    <p class="site-header--subtitle">{{ site.description | safe }}</p>
   </div>
 </header>

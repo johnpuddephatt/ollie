@@ -10,7 +10,7 @@ layout: /layouts/base.njk
       <div class="video-item--proportional">
         {{ video.data.code | safe }}
       </div>
-      <h3 class="video-item--title">{{ video.data.title }}</h3>
+      <h3 class="video-item--title">{{ video.data.title }} <span>{{ video.data.subtitle }}</span></h3>
     </div>
   {% endfor %}
 </div>
