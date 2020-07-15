@@ -8,6 +8,7 @@ collections:
   - name: 'videos'
     label: 'Videos'
     folder: 'src/videos'
+    summary: "{{category}}  –  {{title}}"
     create: true
     editor:
       preview: false
