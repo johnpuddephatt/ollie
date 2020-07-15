@@ -65,7 +65,7 @@ main {
 
 @media screen and (min-width: 800px) {
   .primary-navigation--container {
-    flex: 0 1 12rem;
+    flex: 0 1 14rem;
     margin-right: 2rem;
     border-bottom: none;
     margin-bottom: 0;
@@ -120,7 +120,7 @@ main {
 
 @media screen and (min-width: 1200px) {
   .video-item--wrapper {
-    padding-right: 14rem;
+    padding-right: 16rem;
   }
 }
 
@@ -141,7 +141,7 @@ main {
 
 @media screen and (min-width: 1200px) {
   .video-item.wide {
-    width: calc(100% + 14rem);
+    width: calc(100% + 16rem);
   }
 }
 
