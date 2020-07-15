@@ -47,6 +47,11 @@ main {
   line-height: 1;
 }
 
+.site-header--title em {
+  color: #b4d7ad;
+  font-style: normal;
+}
+
 .site-header--subtitle {
   font-size: 1.5em;
   letter-spacing: -0.04em;
