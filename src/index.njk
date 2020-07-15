@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 ---
-{% set categorySlug = collections.categories[0].data.title | slug %}
+{% set categorySlug = collections.categories[0].data.slug %}
 
 <div class="video-item--wrapper">
   {% for video in collections.videos | categoryFilter(categorySlug) | reverse %}

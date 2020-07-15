@@ -35,13 +35,10 @@
       <div class="primary-navigation--container">
         <nav class="primary-navigation">
             {%- for category in collections.categories %}
-              {% set linkSlug = category.data.title | slug %}
-              {% set linkURL = '/category/' + linkSlug + '/' %}
-
+              {% set linkURL = '/category/' + category.data.slug + '/' %}
               <a class="primary-navigation--item
                 {% if (page.url == linkURL) or (loop.index == 1 and page.url == '/') %}active{% endif %}"
                 href="{{ linkURL }}">{{ category.data.title }}
-
               </a>
             {% endfor %}
         </nav>

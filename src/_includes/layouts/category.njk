@@ -1,11 +1,8 @@
 ---
 layout: /layouts/base.njk
 ---
-
-{% set categorySlug = title | slug %}
-
 <div class="video-item--wrapper">
-  {% for video in collections.videos | categoryFilter(categorySlug) | reverse %}
+  {% for video in collections.videos | categoryFilter(slug) | reverse %}
     <div class="video-item">
       <div class="video-item--proportional">
         {{ video.data.code | safe }}

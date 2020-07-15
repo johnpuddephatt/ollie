@@ -8,12 +8,12 @@ collections:
   - name: 'videos'
     label: 'Videos'
     folder: 'src/videos'
-    summary: "{{category}}  –  {{title}}"
+    summary: "{{title}}  ({{category}})"
     create: true
     editor:
       preview: false
     fields:
-      - {label: 'Name', name: 'name', widget: 'string' }
+      - {label: 'Title', name: 'title', widget: 'string' }
       - {label: 'Subtitle', name: 'subtitle', widget: 'string' }
       - { label: 'Date', name: 'date', widget: 'datetime', dateFormat: 'Do MMM YYYY', timeFormat: false }
       - {label: 'Embed code', name: 'code', widget: 'text' }
@@ -22,7 +22,7 @@ collections:
         widget: "relation"
         collection: "categories"
         searchFields: ["title"]
-        valueField: "title"
+        valueField: "slug"
         displayFields: ["title"]
   - name: 'categories'
     label: 'Categories'
@@ -32,3 +32,4 @@ collections:
       preview: false
     fields:
       - {label: 'Title', name: 'title', widget: 'string' }
+      - {label: 'Slug', name: 'slug', widget: 'string', hint: 'Warning: changing this for existing categories may break things.' }
