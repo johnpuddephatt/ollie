@@ -127,8 +127,20 @@ main {
   padding: 0 1rem 4rem;
 }
 
-.video-item.portrait {
-  width: 60%;
+@media screen and (min-width: 800px) {
+  .video-item.portrait {
+    width: 60%;
+  }
+
+  .video-item.square {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .video-item.wide {
+    width: calc(100% + 14rem);
+  }
 }
 
 .video-item--title {
