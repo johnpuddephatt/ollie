@@ -120,7 +120,7 @@ main {
 
 @media screen and (min-width: 1200px) {
   .video-item--wrapper {
-    padding-right: 16rem;
+    padding-right: 14rem;
   }
 }
 
@@ -141,7 +141,7 @@ main {
 
 @media screen and (min-width: 1200px) {
   .video-item.wide {
-    width: calc(100% + 16rem);
+    width: calc(100% + 14rem);
   }
 }
 
