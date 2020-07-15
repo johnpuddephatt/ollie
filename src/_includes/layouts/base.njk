@@ -1,7 +1,7 @@
 {% extends "extends/html5boilerplate.njk" %}
 
-{% set title = (title + " - " + site.title) if title else (site.title + " - " + site.description) %}
-{% set description = (description) if description else (site.description) %}
+{% set title = (title + " - " + (site.title | striptags )) if title else ((site.title | striptags) + " - " + (site.description | safe)) %}
+{% set description = (description | safe) if description else (site.description | safe) %}
 {% set lang = lang | default(site.lang) %}
 
 {% block headStyles %}
@@ -24,7 +24,7 @@
       <meta property="og:image" content="{{ site.url }}/assets/images/default-og.jpg" />
     {% endif %}
 
-    <meta property="og:description" content="{{ description }}" />
+    <meta property="og:description" content="{{ description | safe }}" />
 
 {% endblock %}
 
