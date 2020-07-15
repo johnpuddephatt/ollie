@@ -1,5 +1,5 @@
 ---
-title: "On the Road: Call Me By Your Name"
+title: Call Me By Your Name
 subtitle: Instagram Story
 date: 2017-03-30T18:42:01.179Z
 code: <iframe
