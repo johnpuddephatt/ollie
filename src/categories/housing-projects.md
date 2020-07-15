@@ -1,5 +1,5 @@
 ---
-title: Housing Projects
+title: Housing projects
 slug: housing
 order: 99
 ---
