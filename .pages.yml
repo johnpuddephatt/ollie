@@ -22,7 +22,7 @@ content:
   - name: 'categories'
     type: collection
     path: "src/categories"
-    label: 'Videos'
+    label: 'Categories'
     fields:
       - name: title
         label: Title
