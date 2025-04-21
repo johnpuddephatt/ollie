@@ -1,0 +1,35 @@
+media:
+  input: src/media
+  output: /media
+content:
+  - name: 'videos'
+    type: collection
+    path: "src/videos"
+    label: 'Videos'
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: subtitle
+        label: Subtitle
+        type: string
+      - name: date
+        label: Date
+        type: date
+      - name: code
+        label: Embed code
+        type: string
+  - name: 'categories'
+    type: collection
+    path: "src/categories"
+    label: 'Videos'
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: slug
+        label: Slug
+        type: string
+      - name: order
+        label: Order
+        type: number
