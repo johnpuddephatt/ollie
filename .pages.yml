@@ -24,6 +24,8 @@ content:
         type: reference
         options:
           collection: categories
+          value: "{slug}"
+          label: "{slug} - ${title}"
   - name: 'categories'
     type: collection
     path: "src/categories"
