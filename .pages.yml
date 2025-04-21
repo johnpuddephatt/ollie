@@ -19,6 +19,11 @@ content:
       - name: code
         label: Embed code
         type: string
+      - name: category
+        label: Category
+        type: reference
+        options:
+          collection: categories
   - name: 'categories'
     type: collection
     path: "src/categories"
